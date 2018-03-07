@@ -22,5 +22,5 @@ class ExtraInfo(models.Model):
         blank=True, 
         max_length=300,
     )
-    resume_file = models.FileField(upload_to='not required sending to db')
-    cover_letter_file = models.FileField(upload_to='not required sending to db')
+    resume_file = models.FileField(verbose_name="Resume")
+    cover_letter_file = models.FileField(verbose_name="Cover Letter")
