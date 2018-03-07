@@ -11,7 +11,7 @@ class ExtraInfoForm(ModelForm):
             "required": u"Please upload a cover letter.",
             "invalid": u"We're pretty sure you made that up.",
         }
-         self.fields['resume_file'].error_messages = {
+        self.fields['resume_file'].error_messages = {
             "required": u"Please upload a resume.",
             "invalid": u"We're pretty sure you made that up.",
         }
