@@ -7,7 +7,7 @@ USER_MODEL = getattr(settings, 'AUTH_USER_MODEL', 'auth.User')
 
 class ExtraInfo(models.Model):
     """
-    This model contains two extra fields that will be saved when a user registers.
+    This model contains four extra fields to registration
     The form that wraps this model is in the forms.py file.
     """
     user = models.OneToOneField(USER_MODEL, null=True)
@@ -22,13 +22,5 @@ class ExtraInfo(models.Model):
         blank=True, 
         max_length=300,
     )
-    resume_text = models.CharField(
-        verbose_name="Resume",
-        blank=True, 
-        max_length=5000,
-    )
-     cover_letter_text = models.CharField(
-        verbose_name="Cover Letter",
-        blank=True, 
-        max_length=5000,
-    )
+    resume_file = models.FileField(upload_to='not required sending to db')
+    cover_letter_file = models.FileField(upload_to='not required sending to db')

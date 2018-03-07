@@ -7,11 +7,15 @@ class ExtraInfoForm(ModelForm):
     """
     def __init__(self, *args, **kwargs):
         super(ExtraInfoForm, self).__init__(*args, **kwargs)
-        self.fields['cover_letter_text'].error_messages = {
-            "required": u"Please tell us... ",
+        self.fields['cover_letter_file'].error_messages = {
+            "required": u"Please upload a cover letter.",
+            "invalid": u"We're pretty sure you made that up.",
+        }
+         self.fields['resume_file'].error_messages = {
+            "required": u"Please upload a resume.",
             "invalid": u"We're pretty sure you made that up.",
         }
 
     class Meta(object):
         model = ExtraInfo
-        fields = ('user_race', 'github_url','resume_text', 'cover_letter_text')
+        fields = ('user_race', 'github_url','resume_file', 'cover_letter_file')
