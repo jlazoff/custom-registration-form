@@ -22,5 +22,5 @@ class ExtraInfo(models.Model):
         blank=True, 
         max_length=300,
     )
-    resume_file = models.FileField(verbose_name="Resume")
-    cover_letter_file = models.FileField(verbose_name="Cover Letter")
+    resume_file = models.FileField(verbose_name="Resume", blank=True)
+    cover_letter_file = models.FileField(verbose_name="Cover Letter", blank=True)

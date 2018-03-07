@@ -12,7 +12,10 @@ Modify Country of residence to Optional - see lms.env.conf and modify to optiona
 3. Set "REGISTRATION_EXTENSION_FORM" to "custom_reg_form.forms.ExtraInfoForm" in `lms.env.json`.
 4. Run migrations. DEV Command:  
 ```
-./manage.py lms makemigrations custom_reg_form —-settings=devstack_docker
+make lms-shell
+source /edx/app/edxapp/edxapp_env
+cd /edx/app/edxapp/edx-platform
+./manage.py <lms/cms> makemigrations <appname> --settings=devstack_docker
 ```
 5. Start/restart the LMS.
 * [Docker Migration and Restart](https://github.com/edx/devstack/blob/master/README.rst) - Instructions on managing docker locally
