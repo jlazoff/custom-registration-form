@@ -28,12 +28,12 @@ class ExtraInfo(models.Model):
         blank=True, 
         max_length=300,
     )
-    cover_letter_file = models.CharField(
+    cover_letter_text = models.CharField(
         verbose_name="Cover Letter",
         blank=True, 
         max_length=5000,
     )
-    resume_file = models.CharField(
+    resume_text = models.CharField(
         verbose_name=b"Resume",
         blank=True, 
         max_length=5000
