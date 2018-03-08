@@ -25,7 +25,6 @@ from setuptools import setup
 
 
 # Main ##############################################################
-
 setup(
     name='custom-form-app',
     version='1.0',

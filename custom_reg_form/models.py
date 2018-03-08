@@ -17,16 +17,16 @@ class ExtraInfo(models.Model):
     user = models.OneToOneField(USER_MODEL, null=True)
   
     user_race = models.CharField(
-        verbose_name=b"Race",
+        verbose_name="Race",
         blank=True, 
         max_length=50,
     )
     github_url = models.CharField(
-        verbose_name=b"Github",
+        verbose_name="Github",
         blank=True, 
         max_length=300,
     )
     linkedin_url = models.CharField(
-        verbose_name=b"LinkedIn/Portfolio/Personal Website",
+        verbose_name="LinkedIn/Portfolio/Personal Website",
         max_length=300,
     )
