@@ -32,4 +32,4 @@ class ExtraInfo(models.Model):
         null = True,
     )
     def __unicode__(self):
-        return u"%i" % self.user
+        return u"%s" % self.user
