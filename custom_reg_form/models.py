@@ -48,8 +48,6 @@ class ExtraInfo(models.Model):
     )
     resume_file = ContentTypeRestrictedFileField(
         upload_to=upload_resume_to,
-        verbose_name ="Resume",
         content_types=["application/pdf"],
         max_upload_size=10485760,
-        blank = True,
     )
