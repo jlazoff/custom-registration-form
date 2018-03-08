@@ -14,4 +14,4 @@ class ExtraInfoForm(ModelForm):
 
     class Meta(object):
         model = ExtraInfo
-        fields = ('linkedin_url','github_url','resume_text','cover_letter_text','user_race')
+        fields = ('linkedin_url','github_url','user_race')

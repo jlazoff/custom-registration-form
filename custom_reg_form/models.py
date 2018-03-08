@@ -11,8 +11,6 @@ class ExtraInfo(models.Model):
     User Race
     GitHub  
     LinkedIn 
-    Cover Letter 
-    Resume 
 
     The form that wraps this model is in the forms.py file.
     """
@@ -28,16 +26,10 @@ class ExtraInfo(models.Model):
         blank=True, 
         max_length=300,
     )
-    cover_letter_text = models.TextField(
-        verbose_name=b"Cover Letter",
-        blank=True,
-    )
-    resume_text = models.TextField(
-        verbose_name=b"Resume",
-        blank=True,
-    )
     linkedin_url = models.CharField(
         verbose_name=b"LinkedIn/Portfolio/Personal Website",
         max_length=300,
         null = True,
     )
+    def __unicode__(self):
+        return "User: " + str(self.user)

@@ -18,9 +18,9 @@ Modify `lms.env.conf`:
 4. Run migrations. DEV Command:
 5. Start/restart the LMS.
 
-* [Docker Migration and Restart](https://github.com/edx/devstack/blob/master/README.rst) - Instructions on managing docker locally
+### [Docker Migration and Restart](https://github.com/edx/devstack/blob/master/README.rst) - Instructions on managing docker locally
 
-### Docker Dev Commands for Migration and Restart
+Docker Dev Commands for Migration and Restart:
 
 ```bash
 make lms-shell
