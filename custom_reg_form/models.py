@@ -6,7 +6,7 @@ USER_MODEL = getattr(settings, 'AUTH_USER_MODEL', 'auth.User')
 
 class ExtraInfo(models.Model):
     """
-    This model contains four extra fields to registration:
+    This model contains extra fields for registration:
 
     User Race
     GitHub URL 
@@ -28,18 +28,17 @@ class ExtraInfo(models.Model):
         blank=True, 
         max_length=300,
     )
-    cover_letter_text = models.CharField(
+    cover_letter_text = models.TextField(
         verbose_name="Cover Letter",
         blank=True, 
         max_length=5000,
     )
-    resume_text = models.CharField(
+    resume_text = models.TextField(
         verbose_name=b"Resume",
         blank=True, 
         max_length=5000
     )
     linkedin_url = models.CharField(
         verbose_name=b"LinkedIn URL",
-        blank=True, 
         max_length=300
     )
