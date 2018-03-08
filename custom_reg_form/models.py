@@ -19,17 +19,17 @@ class ExtraInfo(models.Model):
     user = models.OneToOneField(USER_MODEL, null=True)
   
     user_race = models.CharField(
-        verbose_name="Race",
+        verbose_name=b"Race",
         blank=True, 
         max_length=50,
     )
     github_url = models.CharField(
-        verbose_name="Github URL",
+        verbose_name=b"Github URL",
         blank=True, 
         max_length=300,
     )
     cover_letter_text = models.TextField(
-        verbose_name="Cover Letter",
+        verbose_name=b"Cover Letter",
         blank=True,
     )
     resume_text = models.TextField(
