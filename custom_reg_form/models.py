@@ -51,3 +51,5 @@ class ExtraInfo(models.Model):
         content_types=["application/pdf"],
         max_upload_size=10485760,
     )
+    def __unicode__(self):
+        return self.user
