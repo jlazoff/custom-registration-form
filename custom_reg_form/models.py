@@ -30,13 +30,11 @@ class ExtraInfo(models.Model):
     )
     cover_letter_text = models.TextField(
         verbose_name="Cover Letter",
-        blank=True, 
-        max_length=5000,
+        blank=True,
     )
     resume_text = models.TextField(
         verbose_name=b"Resume",
-        blank=True, 
-        max_length=5000
+        blank=True,
     )
     linkedin_url = models.CharField(
         verbose_name=b"LinkedIn URL",
