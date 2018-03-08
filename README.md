@@ -1,9 +1,9 @@
 # Customization of Registration Form on Open Edx:
 
 ### Prerequisites
-Apply the following modification to lms.env.conf
+Modify Country of residence to Optional by making the following modification to lms.env.conf
 ```
-Modify Country of residence to Optional - see lms.env.conf and modify to optional  `"REGISTRATION_EXTRA_FIELDS": =>  "country": "optional",`
+"REGISTRATION_EXTRA_FIELDS": =>  "country": "optional",
 ```
 ### Installing
 
@@ -15,7 +15,7 @@ Modify Country of residence to Optional - see lms.env.conf and modify to optiona
 make lms-shell
 source /edx/app/edxapp/edxapp_env
 cd /edx/app/edxapp/edx-platform
-./manage.py <lms/cms> makemigrations <appname> --settings=devstack_docker
+./manage.py lms makemigrations custom_reg_form —-settings=devstack_docker
 ```
 5. Start/restart the LMS.
 * [Docker Migration and Restart](https://github.com/edx/devstack/blob/master/README.rst) - Instructions on managing docker locally

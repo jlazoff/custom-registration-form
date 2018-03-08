@@ -12,8 +12,8 @@ class ExtraInfoForm(ModelForm):
             "invalid": u"We're pretty sure you made that up.",
         }
         self.fields['resume_file'].error_messages = {
-            "required": u"Please upload a resume.",
-            "invalid": u"We're pretty sure you made that up.",
+            "required": u"Please upload your resume in PDF format.",
+            "invalid": u"Please upload your resume in PDF format.",
         }
 
     class Meta(object):
