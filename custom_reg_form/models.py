@@ -1,22 +1,13 @@
 from django.conf import settings
 from django.db import models
-from .ContentTypeRestrictedFileField import ContentTypeRestrictedFileField
+#from .ContentTypeRestrictedFileField import ContentTypeRestrictedFileField
 
 # Backwards compatible settings.AUTH_USER_MODEL
 USER_MODEL = getattr(settings, 'AUTH_USER_MODEL', 'auth.User')
 
 # Set Upload Path to uploads/resumes/{user_id}.{filename}.{DateTime}.{ext}
 def upload_resume_to(instance, filename):
-    import os
-    from django.utils.timezone import now
-    filename_base, filename_ext = os.path.splitext(filename)
-
-    return 'uploads/resumes/user_{0}.{1}.{2}.{3}'.format(
-        instance.user.id, 
-        filename_base,   
-        now().strftime("%Y%m%d%H%M"),
-        filename_ext.lower()
-    )
+     return 'resumes/user_{0}/{1}'.format(instance.user.id, filename)
 
 class ExtraInfo(models.Model):
     """
@@ -25,7 +16,7 @@ class ExtraInfo(models.Model):
     User Race - Text Field
     GitHub URL - Text Field
     Cover Letter - Text Field
-    Resume - PDF Uploaded to default storage under `{user_id}.{filename}.{DateTime}.{ext}`
+    Resume - File Upload
 
     The form that wraps this model is in the forms.py file.
     """
@@ -46,10 +37,8 @@ class ExtraInfo(models.Model):
         blank=True, 
         max_length=3000,
     )
-    resume_file = ContentTypeRestrictedFileField(
+    resume_file = models.FileField(
         upload_to=upload_resume_to,
-        content_types=["application/pdf"],
-        max_upload_size=10485760,
+        blank = True,
+        null = True,
     )
-    def __unicode__(self):
-        return u"%s" % self.user
