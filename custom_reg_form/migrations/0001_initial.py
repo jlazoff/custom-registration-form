@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
                 ('github_url', models.CharField(blank=True,max_length=300, verbose_name=b'Github URL')),
                 ('cover_letter_text', models.TextField(blank=True, verbose_name=b"Cover Letter")),
                 ('resume_text', models.TextField(blank=True, verbose_name=b"Resume")),
-                ('linkedin_url', models.CharField(verbose_name=b"LinkedIn URL", max_length=300, null=True)),
+                ('linkedin_url', models.CharField(verbose_name=b"LinkedIn URL/Personal Website/Portfolio", max_length=300, null=True)),
                 ('user', models.OneToOneField(null=True, to=settings.AUTH_USER_MODEL)),
             ],
         ),
