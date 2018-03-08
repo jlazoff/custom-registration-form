@@ -9,8 +9,8 @@ class ExtraInfo(models.Model):
     This model contains extra fields for registration:
 
     User Race
-    GitHub URL 
-    LinkedIn URL
+    GitHub  
+    LinkedIn 
     Cover Letter 
     Resume 
 
@@ -24,7 +24,7 @@ class ExtraInfo(models.Model):
         max_length=50,
     )
     github_url = models.CharField(
-        verbose_name=b"Github URL",
+        verbose_name=b"Github",
         blank=True, 
         max_length=300,
     )
@@ -37,7 +37,7 @@ class ExtraInfo(models.Model):
         blank=True,
     )
     linkedin_url = models.CharField(
-        verbose_name=b"LinkedIn URL/Personal Website/Portfolio",
+        verbose_name=b"LinkedIn/Portfolio/Personal Website",
         max_length=300,
         null = True,
     )

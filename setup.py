@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (c) 2014-2015 Harvard, edX & OpenCraft
+# Copyright (c) 2014-2015 
 #
 # This software's license gives you freedom; you can copy, convey,
 # propagate, redistribute and/or modify this program under the terms of
@@ -35,4 +35,3 @@ setup(
         'Django',
     ],
 )
-

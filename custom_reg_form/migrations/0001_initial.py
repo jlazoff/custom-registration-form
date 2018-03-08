@@ -15,10 +15,10 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('user_race', models.CharField(blank=True, max_length=50, verbose_name=b'Race')),
-                ('github_url', models.CharField(blank=True,max_length=300, verbose_name=b'Github URL')),
+                ('github_url', models.CharField(blank=True,max_length=300, verbose_name=b'Github')),
                 ('cover_letter_text', models.TextField(blank=True, verbose_name=b"Cover Letter")),
                 ('resume_text', models.TextField(blank=True, verbose_name=b"Resume")),
-                ('linkedin_url', models.CharField(verbose_name=b"LinkedIn URL/Personal Website/Portfolio", max_length=300, null=True)),
+                ('linkedin_url', models.CharField(verbose_name=b"LinkedIn/Portfolio/Personal Website", max_length=300, null=True)),
                 ('user', models.OneToOneField(null=True, to=settings.AUTH_USER_MODEL)),
             ],
         ),
