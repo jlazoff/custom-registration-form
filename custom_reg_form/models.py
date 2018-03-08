@@ -29,7 +29,4 @@ class ExtraInfo(models.Model):
     linkedin_url = models.CharField(
         verbose_name=b"LinkedIn/Portfolio/Personal Website",
         max_length=300,
-        null = True,
     )
-    def __unicode__(self):
-        return u"%s" % self.user
