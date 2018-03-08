@@ -38,5 +38,6 @@ class ExtraInfo(models.Model):
     )
     linkedin_url = models.CharField(
         verbose_name=b"LinkedIn URL",
-        max_length=300
+        max_length=300,
+        null = True,
     )
