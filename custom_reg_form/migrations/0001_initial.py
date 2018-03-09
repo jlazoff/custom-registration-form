@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('user_race', models.CharField(blank=True, max_length=50, verbose_name='Race')),
                 ('github_url', models.CharField(blank=True,max_length=300, verbose_name='Github')),
-                ('linkedin_url', models.CharField(verbose_name="LinkedIn or Personal Website", max_length=300, null=True, error_messages = {b'required':'Please indicate your linkedin URL.', b'invalid':"We're pretty sure you made that up."})),
+                ('linkedin_url', models.CharField(verbose_name="LinkedIn or Personal Website", max_length=300, null=True, error_messages = {'required':'Please indicate your linkedin URL.', 'invalid':"We're pretty sure you made that up."})),
                 ('user', models.OneToOneField(null=True, to=settings.AUTH_USER_MODEL)),
             ],
         ),
