@@ -8,8 +8,8 @@ class ExtraInfoForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super(ExtraInfoForm, self).__init__(*args, **kwargs)
         self.fields['linkedin_url'].error_messages = {
-            "required": u"Please indicate your linkedin URL.",
-            "invalid": u"We're pretty sure you made that up.",
+            "required":"Please indicate your linkedin URL.",
+            "invalid":"We're pretty sure you made that up.",
         }
 
     class Meta(object):

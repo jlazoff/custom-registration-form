@@ -22,6 +22,12 @@ Modify `lms.env.conf`:
 
 ```bash
 make lms-shell
+
+cd /edx/app/edxapp
+git clone https://github.com/jlazoff/custom-registration-form
+cd custom-registration-form
+pip install -e .
+
 source /edx/app/edxapp/edxapp_env
 cd /edx/app/edxapp/edx-platform
 ./manage.py lms makemigrations custom_reg_form —-settings=devstack_docker
