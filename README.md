@@ -20,12 +20,11 @@ Modify `lms.env.conf`:
 
 ### [Docker Migration and Restart](https://github.com/edx/devstack/blob/master/README.rst) - Instructions on managing docker locally
 
-Docker Dev Commands for Migration and Restart:
-
 ```bash
 make lms-shell
 source /edx/app/edxapp/edxapp_env
 cd /edx/app/edxapp/edx-platform
 ./manage.py lms makemigrations custom_reg_form —-settings=devstack_docker
+./manage.py lms --settings=devstack migrate custom_reg_form
 kill -9 $(ps aux | grep 'manage.py lms' | egrep -v 'while|grep' | awk '{print $2}')
 ```
