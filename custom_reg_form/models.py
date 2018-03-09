@@ -30,3 +30,5 @@ class ExtraInfo(models.Model):
         verbose_name="LinkedIn or Personal Website",
         max_length=300,
     )
+    def __unicode__(self):
+        return self.user
